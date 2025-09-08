@@ -1,8 +1,9 @@
-from fastapi import APIRouter
+from flask_nova import NovaBlueprint
+from core.extensions import sqlmodel
+
+menu_bp = NovaBlueprint("menu", __name__)
 
 
-menu_router = APIRouter()
+def get_db():
+    return sqlmodel.session()
 
-@menu_router.get("/coffe")
-async def get_coffees():
-    return {'coffees ': ['', '']}

@@ -1,0 +1,19 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "flask-bcrypt>=1.0.1",
+    "flask-cors>=6.0.1",
+    "flask-migrate>=4.1.0",
+    "flask-nova>=0.1.1",
+    "pydantic-settings>=2.10.1",
+    "sqlmodel>=0.0.24",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+]
